@@ -4,24 +4,36 @@
  */
 
 import React from 'react';
+import ReactDom from 'react-dom';
 
-const styles = {
-  containerDiv: {
-    width: '100%'
-  },
-};
+//Bootstrap Components
+import {Grid, Row, Col} from 'react-bootstrap';
+
+//Components
+import Navigation from './components/navigation';
 
 class Main extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
-      <div style={styles.containerDiv}>
+      <Grid fluid>
         <center>
+          <Navigation />
           <img src="images/react.png" />
-          <h1>Hello!</h1>
+          <h1>This is a React App to start building ReactSuit.  Yay!</h1>
+
+          <Grid className="background__MainWrapper">
+            {this.props.children}
+          </Grid>
+
         </center>
-      </div>
+      </Grid>
     );
   }
 }
+Main.propTypes = { children: React.PropTypes.node };
 
 export default Main;
