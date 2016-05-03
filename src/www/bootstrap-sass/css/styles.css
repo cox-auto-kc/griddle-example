@@ -4369,6 +4369,14 @@ a.thumbnail:focus,
 a.thumbnail.active {
   border-color: #2E95D2; }
 
+.griddle-thumb.thumbnail {
+  border: none; }
+  .griddle-thumb.thumbnail > img {
+    max-width: 130px;
+    max-height: 100px;
+    margin: auto;
+    padding: 0; }
+
 .alert {
   padding: 15px;
   margin-bottom: 22px;

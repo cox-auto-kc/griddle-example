@@ -6,6 +6,10 @@ import { Panel, Thumbnail } from 'react-bootstrap';
 //Griddle Components
 import Griddle from 'griddle-react';
 
+//Griddle Custom Components
+import GriddleAvatar from '../components/griddle-avatar';
+import GriddleNameLink from '../components/griddle-name-link';
+
 const users = require('../api/users').users;
 
 const columnMeta = [
@@ -13,51 +17,55 @@ const columnMeta = [
     "columnName": "id",
     "order": 1,
     "locked": false,
-    "visible": true
+    "visible": true,
+    "displayName": "ID"
   },
   {
     "columnName": "avatar",
     "order": 2,
     "locked": false,
     "visible": true,
-    "customComponent": <Avatar/>
+    "customComponent": GriddleAvatar,
+    "displayName": "Avatar"
   },
   {
     "columnName": "name",
     "order": 3,
     "locked": false,
     "visible": true,
-    "customComponent": <NameLink/>
+    "customComponent": GriddleNameLink,
+    "displayName": "Name"
+  },
+  {
+    "columnName": "age",
+    "order": 4,
+    "locked": false,
+    "visible": true,
+    "displayName": "Age"
   },
   {
     "columnName": "trade",
-    "order": 4,
+    "order": 5,
     "locked": false,
-    "visible": true
+    "visible": true,
+    "displayName": "Trade"
+  },
+  {
+    "columnName": "bestknownfor",
+    "order": 6,
+    "locked": false,
+    "visible": true,
+    "displayName": "Best Known For"
+  },
+  {
+    "columnName": "lastseen",
+    "order": 7,
+    "locked": false,
+    "visible": true,
+    "displayName": "Last Seen"
   }
+
 ];
-
-class Avatar extends React.Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return(
-      <Thumbnail href="#" src={this.props.rowData.avatar} style={{height: '100px', width: '100px', position: 'relative', overflow: 'hidden'}}/>
-    );
-  }
-}
-
-class NameLink extends React.Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return(
-      <a href={this.props.rowData.link}>{this.props.rowData.name}</a>
-    );
-  }
-}
 
 class AppGriddle extends React.Component {
   constructor(props){
@@ -69,7 +77,14 @@ class AppGriddle extends React.Component {
       <div>
         <h2>Linked Items</h2>
         <Panel>
-          <Griddle results={users} columnMetadata={columnMeta} columns={["id", "avatar", "name", "trade"]} />
+          <Griddle
+            tableClassName="table"
+            results={users}
+            columnMetadata={columnMeta}
+            columns={["id", "avatar", "name", "age", "trade", "bestknownfor", "lastseen"]}
+            showFilter={true}
+            showSettings={true}
+          />
         </Panel>
       </div>
     );
