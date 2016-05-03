@@ -12,6 +12,16 @@ import GriddleNameLink from '../components/griddle-name-link';
 
 const users = require('../api/users').users;
 
+const sortName = function(name){
+    let a = name.split(" ");
+    return a[1] + " " + a[0];
+};
+
+const sortAge = function(age){
+  const getAge = (age !== "unknown") ? age: "200";
+    return getAge;
+};
+
 const columnMeta = [
   {
     "columnName": "id",
@@ -34,14 +44,16 @@ const columnMeta = [
     "locked": false,
     "visible": true,
     "customComponent": GriddleNameLink,
-    "displayName": "Name"
+    "displayName": "Name",
+    "compare": sortName
   },
   {
     "columnName": "age",
     "order": 4,
     "locked": false,
     "visible": true,
-    "displayName": "Age"
+    "displayName": "Age",
+    "compare": sortAge
   },
   {
     "columnName": "trade",
@@ -82,6 +94,7 @@ class AppGriddle extends React.Component {
             results={users}
             columnMetadata={columnMeta}
             columns={["id", "avatar", "name", "age", "trade", "bestknownfor", "lastseen"]}
+            initialSort="age"
             showFilter={true}
             showSettings={true}
           />
