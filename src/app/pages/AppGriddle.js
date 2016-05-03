@@ -14,12 +14,17 @@ const users = require('../api/users').users;
 
 const sortName = function(name){
     let a = name.split(" ");
-    return a[1] + " " + a[0];
+    if(a.length <= 2){
+      return a[1] + " " + a[0];
+    }
+    else{
+      return a[2] + " " + a[0] + " " + a[1];
+    }
 };
 
 const sortAge = function(age){
   const getAge = (age !== "unknown") ? age: "200";
-    return getAge;
+  return getAge;
 };
 
 const columnMeta = [
