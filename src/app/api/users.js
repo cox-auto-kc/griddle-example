@@ -58,7 +58,7 @@ module.exports = {
         "trade": "musician",
         "avatar": "http://i.kinja-img.com/gawker-media/image/upload/s--dgxHvOTA--/18jv9qnevn0x9jpg.jpg",
         "age": 23,
-        "bestknownfor": "Being a big Rock Star and getting kidnapped by biker gangs",
+        "bestknownfor": "Being a big Rock Star and getting kidnapped by Willam Dafoe led biker gangs",
         "lastseen": "Streets of Fire"
       },
       {
@@ -68,7 +68,7 @@ module.exports = {
         "trade": "writer",
         "avatar": "https://s-media-cache-ak0.pinimg.com/736x/e9/d0/bc/e9d0bcf3fcb54c58228e1b6fc12d5e7c.jpg",
         "age": 37,
-        "bestknownfor": "Losing his marbles in response to captivity and writer's block",
+        "bestknownfor": "Losing his marbles in response to cabin fever and writer's block",
         "lastseen": "The Shining"
       },
       {
@@ -78,7 +78,7 @@ module.exports = {
         "trade": "survivalist",
         "avatar": "http://hardinthecity.files.wordpress.com/2011/12/ripley-560-thumb-560xauto-28506.jpg",
         "age": 28,
-        "bestknownfor": "Lifelong vendetta with a xenomorph",
+        "bestknownfor": "Fervent racism against xenomorphs",
         "lastseen": "Alien 3"
       },
       {
@@ -108,7 +108,7 @@ module.exports = {
         "trade": "community organizer",
         "avatar": "http://pre03.deviantart.net/a761/th/pre/i/2013/241/f/c/bill_the_butcher_by_krisskringle-d6k6kkb.jpg",
         "age": 52,
-        "bestknownfor": "Walking around with that crazy patriotic eye",
+        "bestknownfor": "Walking around with a crazy patriotic eye, and of course the moustache",
         "lastseen": "Gangs of New York"
       },
       {
@@ -118,7 +118,7 @@ module.exports = {
         "trade": "actor",
         "avatar": "http://cheapbossattack.files.wordpress.com/2012/09/3363489663_186273ae5a.jpg",
         "age": 44,
-        "bestknownfor": "Being both a Therapist and an Analyst, occasionally an actor",
+        "bestknownfor": "Being both a Therapist and an Analyst",
         "lastseen": "Arrested Development"
       },
       {
@@ -128,7 +128,7 @@ module.exports = {
         "trade": "reporter",
         "avatar": "http://2.bp.blogspot.com/-elAylodLbqM/UoXVqkRv3qI/AAAAAAAAMHA/XPYYJFcNEf0/s1600/Robin-how-i-met-your-mother-31111428-1024-768.png",
         "age": 32,
-        "bestknownfor": "Not being the mother",
+        "bestknownfor": "Not being The Mother",
         "lastseen": "How I Met Your Mother"
       },
       {
@@ -138,7 +138,7 @@ module.exports = {
         "trade": "events organizer",
         "avatar": "https://i.ytimg.com/vi/ReT3s0siI_Q/maxresdefault.jpg",
         "age": 64,
-        "bestknownfor": "Being the best roadie ever, as well as keeping track of M&M's",
+        "bestknownfor": "Serving as God amongst all Roadies and managing M&M's for Ozzy",
         "lastseen": "Wayne's World"
       },
       {
@@ -168,7 +168,7 @@ module.exports = {
         "trade": "musician",
         "avatar": "http://www.cinemablend.com/images/news/36820/_1365434404.gif",
         "age": 45,
-        "bestknownfor": "Infecting the world with his mad mojo",
+        "bestknownfor": "Infecting the world with his mad mojo, and gracing us with his presence on Rex Manning day",
         "lastseen": "Empire Records"
       },
       {
@@ -218,7 +218,7 @@ module.exports = {
         "trade": "philosophy",
         "avatar": "http://1.bp.blogspot.com/-5vWEYGj31LQ/Ua-aol5_IsI/AAAAAAAAHlY/mh1cL3ghpSE/s1600/oscar+the+grouch.jpeg",
         "age": "unknown",
-        "bestknownfor": "Smelling",
+        "bestknownfor": "Smelling like something that gets stuck on the bottom of your shoe",
         "lastseen": "Sesame Street"
       },
       {
@@ -228,7 +228,7 @@ module.exports = {
         "trade": "community organizer",
         "avatar": "https://s-media-cache-ak0.pinimg.com/736x/3d/03/bb/3d03bb7eb054f2018e671a2f9ce65036.jpg",
         "age": 43,
-        "bestknownfor": "Being David Bowie if David Bowie lived in a land of muppets",
+        "bestknownfor": "Being David Bowie if David Bowie lived in a land of psychotic muppets",
         "lastseen": "Labrynth"
       },
       {
@@ -248,7 +248,7 @@ module.exports = {
         "trade": "demolitions",
         "avatar": "http://i.dailymail.co.uk/i/pix/2016/02/06/20/30F2B8FA00000578-3435292-image-a-59_1454790981532.jpg",
         "age": 30,
-        "bestknownfor": "Having a cool dad, but being way emo about it",
+        "bestknownfor": "Having the Coolest Dad and being way Emo about it",
         "lastseen": "The Force Awakens"
       },
       {

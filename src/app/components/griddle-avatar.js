@@ -12,7 +12,7 @@ class GriddleAvatar extends React.Component{
   }
   render(){
     return(
-      <Thumbnail href="#" src={this.props.rowData.avatar} className="griddle-thumb" />
+        <Thumbnail href="#" src={this.props.rowData.avatar} className="griddle-thumb" />
     );
   }
 }

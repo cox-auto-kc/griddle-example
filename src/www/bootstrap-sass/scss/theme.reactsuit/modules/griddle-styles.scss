@@ -1,0 +1,140 @@
+.griddle-container{
+  border:1px solid #DDD;
+}
+
+.griddle .top-section{
+  clear:both;
+  display:table;
+  width:100%;
+}
+
+.griddle .griddle-filter{
+  float:left;
+  width:50%;
+  text-align:left;
+  color:#222;
+  min-height:1px;
+}
+
+.griddle .griddle-settings-toggle{
+  float:left;
+  width:50%;
+  text-align:right;
+}
+
+.griddle .griddle-settings{
+  background-color:#FFF;
+  border:1px solid #DDD;
+  color:#222;
+  padding:10px;
+  margin-bottom:10px;
+}
+
+.griddle .griddle-settings .griddle-columns{
+  clear:both;
+  display:table;
+  width:100%;
+  border-bottom:1px solid #EDEDED;
+  margin-bottom:10px;
+}
+
+.griddle .griddle-settings .griddle-column-selection{
+  float:left;
+  width:20%;
+}
+.griddle table{
+  width:100%;
+  /*table-layout:fixed;*/
+  table-layout:auto;
+}
+
+.griddle th{
+  background-color:#EDEDEF;
+  border:0px;
+  border-bottom:1px solid #DDD;
+  color:#222;
+  padding:5px;
+}
+
+.griddle td{
+  padding:5px;
+  background-color:#FFF;
+  border-top-color:#DDD;
+  color:#222;
+}
+
+
+.griddle .footer-container{
+  padding:0px;
+  background-color:#EDEDED;
+  border:0px;
+  color:#222;
+}
+
+//Pref & Next Styles
+.griddle .griddle-previous, .griddle .griddle-page, .griddle .griddle-next{
+  float:left;
+  width:33%;
+  min-height:1px;
+  margin-top:5px;
+}
+.griddle .griddle-page{
+  text-align:center;
+}
+.griddle .griddle-next{
+  text-align:right;
+}
+
+
+//Custom
+.griddle__header {
+  padding-right: 20px;
+}
+.griddle__header-sort-icon {
+  position: relative;
+  margin-left: -10px;
+}
+
+.griddle-body tr {
+  .griddle__column--id,
+  .griddle__column--avatar,
+  .griddle__column--name,
+  .griddle__column--age,
+  .griddle__column--trade,
+  .griddle__column--known,
+  .griddle__column--last-ref{
+    vertical-align: middle;
+  }
+  .griddle__column--id{
+    width: 65px;
+  }
+  .griddle__column--name,
+  .griddle__column--age,
+  .griddle__column--trade,
+  .griddle__column--known,
+  .griddle__column--last-ref{
+    padding: 1em;
+  }
+  .griddle__column--avatar,
+  .griddle__column--name,
+  .griddle__column--age,
+  .griddle__column--trade{
+    text-align: center;
+  }
+}
+
+
+.griddle-thumb.thumbnail {
+  border: none;
+  > img {
+    max-width: 130px;
+    max-height: 100px;
+    margin: auto;
+    padding: 0;
+  }
+}
+
+.griddle__pagination-container{
+  margin: auto;
+  text-align: center;
+}
