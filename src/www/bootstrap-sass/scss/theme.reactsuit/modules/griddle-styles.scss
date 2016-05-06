@@ -5,6 +5,7 @@
 .griddle .top-section{
   clear:both;
   display:table;
+  margin-bottom: 16px;
   width:100%;
 }
 
@@ -41,6 +42,8 @@
 .griddle .griddle-settings .griddle-column-selection{
   float:left;
   width:20%;
+  margin: 5px 0;
+  text-align: left;
 }
 .griddle table{
   width:100%;
@@ -137,4 +140,10 @@
 .griddle__pagination-container{
   margin: auto;
   text-align: center;
+}
+
+.griddle__is-sortable,
+.sort-descending,
+.sort-ascending{
+  cursor: pointer;
 }

@@ -49,14 +49,13 @@ class GriddleCustomPager extends React.Component{
 
   render(){
     const maxPage     = this.props.maxPage;
-    const pagerBsSize = this.props.pagerBsSize;
 
     if (maxPage < 2) { return <span />; }
 
     return (
       <div className="griddle__pagination-container">
         <Pagination
-          pagerBsSize={pagerBsSize}
+          bsSize={"small"}
           items={maxPage}
           next={this.getNext()}
           prev={this.getPrev()}
@@ -75,7 +74,6 @@ GriddleCustomPager.propTypes = {
   maxButtons   : React.PropTypes.number,
   nextText     : React.PropTypes.string,
   previousText : React.PropTypes.string,
-  pagerBsSize  : React.PropTypes.string,
   setPage      : React.PropTypes.func
 };
 
@@ -84,8 +82,7 @@ GriddleCustomPager.defaultProps = {
   maxPage      : 0,
   maxButtons   : 10,
   nextText     : "Next",
-  previousText : "Previous",
-  pagerBsSize  : "large"
+  previousText : "Previous"
 };
 
 export default GriddleCustomPager;

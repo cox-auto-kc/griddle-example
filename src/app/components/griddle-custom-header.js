@@ -9,17 +9,21 @@ class GriddleCustomHeader extends React.Component{
     super(props);
   }
 
+
   render(){
+    const isSortableClass = this.props.sortable ? 'griddle__is-sortable' : null;
+
     return(
-      <span className="griddle__header">
-        {this.props.displayName}
-      </span>
+        <span className={"griddle__header " + isSortableClass} >
+          {this.props.displayName}
+        </span>
     );
   }
 }
+
 GriddleCustomHeader.propTypes = {
-  rowData: React.PropTypes.object,
-  displayName: React.PropTypes.string
+  displayName: React.PropTypes.string,
+  sortable: React.PropTypes.bool
 };
 
 
