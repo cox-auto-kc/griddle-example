@@ -22,7 +22,7 @@ class Main extends React.Component {
       <Grid fluid>
         <center>
           <Navigation />
-          <img src="images/react.png" />
+          <img src="images/react.png" style={{maxWidth: "100%"}}/>
           <h1>This is a React App to start building ReactSuit.  Yay!</h1>
 
           <Grid className="background__MainWrapper">

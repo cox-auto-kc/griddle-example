@@ -11,13 +11,24 @@ class GriddleAvatar extends React.Component{
     super(props);
   }
   render(){
+    const displayName = this.props.metadata.displayName;
+    const imageSrc = this.props.rowData[this.props.metadata.columnName];
+
+    const linkSrc = !this.props.metadata.customComponentLinkSrc ? "#": this.props.rowData[this.props.metadata.customComponentLinkSrc];
+    const target = (!this.props.metadata.customComponentLinkSrc) ? null : "_blank";
+
     return(
-        <Thumbnail href="#" src={this.props.rowData.avatar} className="griddle-thumb" />
+      <div className="griddle__inner-cell" data-table-cat={displayName} >
+        <div className="griddle__data">
+          <Thumbnail href={linkSrc} target={target} src={imageSrc} className="griddle-thumb" />
+        </div>
+      </div>
     );
   }
 }
 GriddleAvatar.propTypes = {
-  rowData: React.PropTypes.object
+  rowData: React.PropTypes.object,
+  metadata: React.PropTypes.object
 };
 
 

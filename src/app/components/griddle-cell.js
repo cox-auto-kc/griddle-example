@@ -4,27 +4,27 @@ import ReactDOM from 'react-dom';
 //Griddle Components
 import Griddle from 'griddle-react';
 
-class GriddleNameLink extends React.Component{
+class GriddleCell extends React.Component{
   constructor(props){
     super(props);
   }
   render(){
     const displayName = this.props.metadata.displayName;
-    const linkText = this.props.rowData[this.props.metadata.columnName];
-    const linkSrc = this.props.rowData[this.props.metadata.customComponentLinkSrc];
+    const columnInfo = this.props.rowData[this.props.metadata.columnName];
 
     return(
       <div className="griddle__inner-cell" data-table-cat={displayName}>
         <div className="griddle__data">
-          <a href={linkSrc} target="_blank">{linkText}</a>
+          {columnInfo}
         </div>
       </div>
     );
   }
 }
-GriddleNameLink.propTypes = {
+GriddleCell.propTypes = {
   rowData: React.PropTypes.object,
   metadata: React.PropTypes.object
 };
 
-export default GriddleNameLink;
+
+export default GriddleCell;

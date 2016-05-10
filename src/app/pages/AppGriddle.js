@@ -8,11 +8,12 @@ import { Panel, Thumbnail, Glyphicon } from 'react-bootstrap';
 import Griddle from 'griddle-react';
 
 //Griddle Custom Components
+import GriddleResponsiveHeader from '../components/griddle-responsive-header';
+import GriddleCell from '../components/griddle-cell';
 import GriddleAvatar from '../components/griddle-avatar';
 import GriddleNameLink from '../components/griddle-name-link';
 import GriddleCustomHeader from '../components/griddle-custom-header';
 import GriddleCustomPager from '../components/griddle-custom-pager';
-import GriddleCustomLayout from '../components/griddle-custom-layout';
 
 const users = require('../api/users').users;
 
@@ -35,10 +36,11 @@ const columnMeta = [
   {
     "columnName": "id",
     "order": 1,
-    "priority": 3,
     "sortable": true,
     "locked": false,
     "visible": true,
+    "customComponent": GriddleResponsiveHeader,
+    "customComponentLinkSrc": "link",
     "displayName": "ID",
     "customHeaderComponent": GriddleCustomHeader,
     "customHeaderComponentProps": { "sortable" : true },
@@ -47,7 +49,6 @@ const columnMeta = [
   {
     "columnName": "avatar",
     "order": 2,
-    "priority": 2,
     "locked": false,
     "visible": true,
     "customComponent": GriddleAvatar,
@@ -60,10 +61,10 @@ const columnMeta = [
   {
     "columnName": "name",
     "order": 3,
-    "priority": 1,
     "locked": false,
     "visible": true,
     "customComponent": GriddleNameLink,
+    "customComponentLinkSrc": "link",
     "displayName": "Name",
     "compare": sortName,
     "customHeaderComponent": GriddleCustomHeader,
@@ -73,9 +74,9 @@ const columnMeta = [
   {
     "columnName": "age",
     "order": 4,
-    "priority": 5,
     "locked": false,
     "visible": true,
+    "customComponent": GriddleCell,
     "displayName": "Age",
     "compare": sortAge,
     "customHeaderComponent": GriddleCustomHeader,
@@ -85,9 +86,9 @@ const columnMeta = [
   {
     "columnName": "trade",
     "order": 5,
-    "priority": 4,
     "locked": false,
     "visible": true,
+    "customComponent": GriddleCell,
     "displayName": "Trade",
     "customHeaderComponent": GriddleCustomHeader,
     "customHeaderComponentProps": { "sortable" : true },
@@ -96,9 +97,9 @@ const columnMeta = [
   {
     "columnName": "bestknownfor",
     "order": 6,
-    "priority": 6,
     "locked": false,
     "visible": true,
+    "customComponent": GriddleCell,
     "sortable": false,
     "displayName": "Best Known For",
     "customHeaderComponent": GriddleCustomHeader,
@@ -108,9 +109,9 @@ const columnMeta = [
   {
     "columnName": "lastseen",
     "order": 7,
-    "priority": 7,
     "locked": false,
     "visible": true,
+    "customComponent": GriddleCell,
     "displayName": "Last Seen",
     "customHeaderComponent": GriddleCustomHeader,
     "customHeaderComponentProps": { "sortable" : true },
@@ -127,10 +128,8 @@ const columnMeta = [
 class AppGriddle extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      data: users
-    };
   }
+
 
   render() {
     return (
@@ -139,7 +138,7 @@ class AppGriddle extends React.Component {
         <Panel>
           <Griddle
             useGriddleStyles={false}
-            tableClassName="table"
+            tableClassName="griddle-test-table"
             results={users}
 
             columnMetadata={columnMeta}
@@ -154,17 +153,12 @@ class AppGriddle extends React.Component {
 
             nextText={""}
             previousText={""}
+
             useCustomPagerComponent={true}
             customPagerComponent={GriddleCustomPager}
 
-            useCustomGridComponent={true}
-            customGridComponent={GriddleCustomLayout}
-            customGridComponentClassName="custom"
-            enableToggleCustom={true}
-
             showFilter={true}
             showSettings={true}
-
           />
         </Panel>
       </div>
