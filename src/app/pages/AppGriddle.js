@@ -32,6 +32,7 @@ const sortAge = function(age){
   return getAge;
 };
 
+
 const columnMeta = [
   {
     "columnName": "id",
@@ -40,7 +41,7 @@ const columnMeta = [
     "locked": false,
     "visible": true,
     "customComponent": GriddleResponsiveHeader,
-    "customComponentLinkSrc": "link",
+    "responsiveHeaderProps": { "right": "name" },
     "displayName": "ID",
     "customHeaderComponent": GriddleCustomHeader,
     "customHeaderComponentProps": { "sortable" : true },
@@ -125,11 +126,34 @@ const columnMeta = [
   }
 ];
 
+
+
 class AppGriddle extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      responsiveView: false
+    };
+
+    this.componentWillMount = this.componentWillMount.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
 
+  componentWillMount() {
+    window.addEventListener('load', this.handleResize);
+    window.addEventListener('click', this.handleResize);
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  handleResize(e) {
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    const view = ( width < 992 ) ? true : false;
+    this.setState({responsiveView: view});
+  }
 
   render() {
     return (
@@ -142,7 +166,8 @@ class AppGriddle extends React.Component {
             results={users}
 
             columnMetadata={columnMeta}
-            columns={["id", "avatar", "name", "age", "trade", "bestknownfor", "lastseen"]}
+
+            columns={[ "id", "avatar", "name", "age", "trade", "bestknownfor", "lastseen"]}
             initialSort="name"
             sortAscendingComponent={<small className="griddle__header-sort-icon"><Glyphicon glyph="chevron-up" /></small>}
             sortDescendingComponent={<small className="griddle__header-sort-icon"><Glyphicon glyph="chevron-down" /></small>}
@@ -159,6 +184,7 @@ class AppGriddle extends React.Component {
 
             showFilter={true}
             showSettings={true}
+
           />
         </Panel>
       </div>
