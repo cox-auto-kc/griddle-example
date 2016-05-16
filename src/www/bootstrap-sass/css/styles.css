@@ -5905,7 +5905,7 @@ button.close {
   padding: 5px; }
 
 .griddle td {
-  padding: 5px;
+  padding: 5px 15px;
   background-color: #FFF;
   border-top-color: #DDD;
   color: #222; }
@@ -5916,7 +5916,9 @@ button.close {
   border: 0px;
   color: #222; }
 
-.griddle .griddle-previous, .griddle .griddle-page, .griddle .griddle-next {
+.griddle .griddle-previous,
+.griddle .griddle-page,
+.griddle .griddle-next {
   float: left;
   width: 33%;
   min-height: 1px;
@@ -5999,7 +6001,29 @@ table.griddle-test-table {
   font-size: 1.25em; }
 
 @media screen and (max-width: 992px) {
-  .griddle-test-table .griddle__inner-cell:before {
+  .container,
+  .panel-body {
+    padding: 0; }
+
+  table.griddle-test-table thead {
+    display: none; }
+
+  .griddle-test-table tbody td,
+  .griddle-test-table tbody tr {
+    border: 1px solid rgba(0, 0, 0, 0.15); }
+
+  .griddle-test-table td {
+    display: block; }
+
+  .griddle td {
+    padding: 0; }
+
+  .griddle__inner-cell {
+    display: inline-block;
+    display: flex;
+    width: 100%; }
+
+  .griddle__inner-cell:before {
     content: attr(data-table-cat);
     color: #fff;
     background-color: #666;
@@ -6011,45 +6035,20 @@ table.griddle-test-table {
     float: left;
     text-align: left; }
 
-  table.griddle-test-table tbody td.griddle__column--name {
-    display: none; }
-
-  .griddle td {
-    padding: 0; }
-
-  .griddle__inner-data {
-    padding: 0; }
-
-  table.griddle-test-table thead {
-    display: none; }
-
-  table.griddle-test-table tbody td {
-    display: block; }
-
-  table.griddle-test-table tbody td,
-  table.griddle-test-table tbody tr {
-    border: 1px solid rgba(0, 0, 0, 0.15); }
-
   .griddle-thumb.thumbnail > img {
     max-width: 100%; }
 
   .griddle-body tr .griddle__column--id {
     width: 100%; }
 
-  .griddle__inner-cell {
-    display: inline-block;
-    display: flex;
-    width: 100%; }
+  .griddle-test-table tbody .griddle__column--name {
+    display: none; }
 
   table.griddle-test-table tbody td div.griddle__data {
     padding: 10px;
     width: 65%;
     float: left;
     text-align: center;
-    display: inline-block; }
-
-  .container,
-  .panel-body {
-    padding: 0; } }
+    display: inline-block; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -13,6 +13,7 @@ import AppTextFields from './pages/AppTextFields';
 import AppLinkedItems from './pages/AppLinkedItems';
 import AppAlerts from './pages/AppAlerts';
 import AppGriddle from './pages/AppGriddle';
+import AppGriddleReddit from './pages/AppGriddleReddit';
 
 
 // Render the main app react component into the app div.
@@ -26,6 +27,7 @@ ReactDOM.render((
         <Route path="/linked-items" component={AppLinkedItems} />
         <Route path="/alerts" component={AppAlerts} />
         <Route path="/charts" component={AppGriddle} />
+        <Route path="/reddit" component={AppGriddleReddit} />
       </Route>
     </Router>
 ), document.getElementById('app'));

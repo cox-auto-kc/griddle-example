@@ -39,6 +39,9 @@ class Navigation extends React.Component {
             <MenuItem href="/charts" >
               Charts
             </MenuItem>
+            <MenuItem href="/reddit" >
+              Reddit
+            </MenuItem>
           </Nav>
       </Navbar>
     );
