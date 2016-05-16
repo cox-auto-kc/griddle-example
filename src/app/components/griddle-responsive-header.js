@@ -8,15 +8,16 @@ import GriddleCell from '../components/griddle-cell';
 class GriddleResponsiveHeaders extends React.Component{
   constructor(props){
     super(props);
+    this.state ={
+      responsiveView: false
+    };
 
-    /*
     this.componentWillMount = this.componentWillMount.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.handleResize = this.handleResize.bind(this);
-    */
   }
 
-  /*
+
   componentWillMount() {
     window.addEventListener('load', this.handleResize);
     window.addEventListener('click', this.handleResize);
@@ -31,7 +32,7 @@ class GriddleResponsiveHeaders extends React.Component{
     const view = ( width < 992 ) ? true : false;
       this.setState({responsiveView: view});
   }
-  */
+
 
   doMobileHeader(){
     const columnInfo = this.props.rowData[this.props.metadata.columnName];
@@ -60,7 +61,7 @@ class GriddleResponsiveHeaders extends React.Component{
   }
 
   render(){
-    const responsiveView = this.props.rowData.responsiveView;
+    const responsiveView = this.state.responsiveView;
 
     if(responsiveView){
       return this.doMobileHeader();

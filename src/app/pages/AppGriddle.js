@@ -131,29 +131,8 @@ const columnMeta = [
 class AppGriddle extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      responsiveView: false
-    };
-
-    this.componentWillMount = this.componentWillMount.bind(this);
-    this.componentDidMount = this.componentDidMount.bind(this);
-    this.handleResize = this.handleResize.bind(this);
   }
 
-  componentWillMount() {
-    window.addEventListener('load', this.handleResize);
-    window.addEventListener('click', this.handleResize);
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
-  }
-
-  handleResize(e) {
-    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    const view = ( width < 992 ) ? true : false;
-    this.setState({responsiveView: view});
-  }
 
   render() {
     return (
