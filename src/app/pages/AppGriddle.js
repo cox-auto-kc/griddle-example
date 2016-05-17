@@ -36,7 +36,7 @@ const sortAge = function(age){
 const columnMeta = [
   {
     "columnName": "id",
-    "order": 1,
+    "order": 0,
     "sortable": true,
     "locked": false,
     "visible": true,
@@ -50,10 +50,10 @@ const columnMeta = [
   {
     "columnName": "avatar",
     "order": 2,
+    "sortable": false,
     "locked": false,
     "visible": true,
     "customComponent": GriddleAvatar,
-    "sortable": false,
     "displayName": "Avatar",
     "customHeaderComponent": GriddleCustomHeader,
     "customHeaderComponentProps": { "sortable" : false },

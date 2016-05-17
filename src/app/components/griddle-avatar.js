@@ -14,6 +14,7 @@ class GriddleAvatar extends React.Component{
     const displayName = this.props.metadata.displayName;
     const imageSrc = this.props.rowData[this.props.metadata.columnName];
 
+
     const linkSrc = !this.props.metadata.customComponentLinkSrc ? "#": this.props.rowData[this.props.metadata.customComponentLinkSrc];
     const target = (!this.props.metadata.customComponentLinkSrc) ? null : "_blank";
 
