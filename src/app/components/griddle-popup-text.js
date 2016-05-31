@@ -6,6 +6,7 @@ import Griddle from 'griddle-react';
 
 import { Panel, Modal, Button } from 'react-bootstrap';
 
+
 class GriddlePopupLink extends React.Component{
   constructor(props){
     super(props);
@@ -22,14 +23,13 @@ class GriddlePopupLink extends React.Component{
   }
 
 
-  render(){
 
-    const displayName = this.props.metadata.displayName;
-    const linkText = this.props.rowData[this.props.metadata.columnName];
-    const abbreviatedText = linkText.substring(0,80);
+  abbreviatedBlock(linkText){
 
-    return(
-      <div className="griddle__inner-cell" data-table-cat={displayName}>
+    if(linkText) {
+      const abbreviatedText = linkText.substring(0,80);
+
+      return (
         <div className="griddle__data">
           <div>
             {abbreviatedText}
@@ -39,9 +39,14 @@ class GriddlePopupLink extends React.Component{
             </a>
           </div>
         </div>
+      );
+    }
+  }
 
-
-        <Modal show={this.state.show} onHide={this.handleToggle} >
+  modalBlock(linkText){
+    if(linkText) {
+      return (
+        <Modal show={this.state.show} onHide={this.handleToggle}>
           <Modal.Body>
             {linkText}
           </Modal.Body>
@@ -51,6 +56,22 @@ class GriddlePopupLink extends React.Component{
             </Button>
           </Modal.Footer>
         </Modal>
+      );
+    }
+  }
+
+  render(){
+
+    const displayName = this.props.metadata.displayName;
+    const linkText = this.props.rowData[this.props.metadata.columnName];
+
+    const abbreviatedBlock = this.abbreviatedBlock(linkText);
+    const modalBlock = this.modalBlock(linkText);
+
+    return(
+      <div className="griddle__inner-cell" data-table-cat={displayName}>
+        {abbreviatedBlock}
+        {modalBlock}
       </div>
     );
   }
