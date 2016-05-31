@@ -10,10 +10,15 @@ class GriddleAvatar extends React.Component{
   constructor(props){
     super(props);
   }
+
+  checkImage(src){
+    const imageSrc = (src !== 'self' && src !== 'default') ?  src: '../images/missing.jpg';
+    return imageSrc;
+  }
+
   render(){
     const displayName = this.props.metadata.displayName;
-    const imageSrc = this.props.rowData[this.props.metadata.columnName];
-
+    const imageSrc = this.checkImage(this.props.rowData[this.props.metadata.columnName]);
 
     const linkSrc = !this.props.metadata.customComponentLinkSrc ? "#": this.props.rowData[this.props.metadata.customComponentLinkSrc];
     const target = (!this.props.metadata.customComponentLinkSrc) ? null : "_blank";
