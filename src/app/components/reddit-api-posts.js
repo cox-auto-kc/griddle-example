@@ -10,7 +10,7 @@ import Griddle from 'griddle-react';
 
 import GriddleCustomPager from '../components/griddle-custom-pager';
 
-const columnMeta = require('../api/redditMeta').columnMeta;
+const columnMeta = require('../griddle-meta/redditMeta').columnMeta;
 
 export default class Posts extends Component {
 
