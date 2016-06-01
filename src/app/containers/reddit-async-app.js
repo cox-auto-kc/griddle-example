@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Provider, connect } from 'react-redux';
-import { selectReddit, fetchPostsIfNeeded, invalidateReddit } from '../actions';
-import Picker from './reddit-api-picker';
-import Posts from './reddit-api-posts';
+import { selectReddit, fetchPostsIfNeeded, invalidateReddit } from '../actions/redditActions';
+import Picker from './../components/reddit-api-picker';
+import Posts from './../components/reddit-api-posts';
 
 
 class AsyncApp extends React.Component {

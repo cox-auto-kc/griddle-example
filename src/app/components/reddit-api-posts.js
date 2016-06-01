@@ -8,7 +8,6 @@ import Griddle from 'griddle-react';
 
 //Griddle Custom Components
 
-
 import GriddleCustomPager from '../components/griddle-custom-pager';
 
 const columnMeta = require('../api/redditMeta').columnMeta;

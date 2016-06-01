@@ -1,5 +1,4 @@
 //Griddle Custom Components
-
 import GriddleResponsiveHeader from '../components/griddle-responsive-header';
 import GriddleCell from '../components/griddle-cell';
 import GriddleAvatar from '../components/griddle-avatar';
