@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import {Router, Route, browserHistory} from 'react-router';
+import configureStore from './store/configureStore';
 
 import Main from './main';
 
@@ -16,8 +17,11 @@ import AppGriddle from './pages/AppGriddle';
 import AppGriddleReddit from './pages/AppGriddleReddit';
 
 
+const store = configureStore();
+
 // Render the main app react component into the app div.
 ReactDOM.render((
+  <Provider store={store}>
     <Router history={browserHistory}>
       <Route component={Main}>
         <Route path="/" component={Home} />
@@ -30,4 +34,5 @@ ReactDOM.render((
         <Route path="/reddit" component={AppGriddleReddit} />
       </Route>
     </Router>
+  </Provider>
 ), document.getElementById('app'));
