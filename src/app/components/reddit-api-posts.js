@@ -28,7 +28,7 @@ export default class Posts extends Component {
 
               columnMetadata={columnMeta}
 
-              columns={[ "author", "thumbnail", "subreddit", "selftext" ]}
+              columns={[ "id", "author", "thumbnail", "subreddit", "selftext" ]}
               initialSort="name"
               sortAscendingComponent={<small className="griddle__header-sort-icon"><Glyphicon glyph="chevron-up" /></small>}
               sortDescendingComponent={<small className="griddle__header-sort-icon"><Glyphicon glyph="chevron-down" /></small>}
