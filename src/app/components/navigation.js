@@ -42,6 +42,9 @@ class Navigation extends React.Component {
             <MenuItem href="/reddit" >
               Reddit
             </MenuItem>
+            <MenuItem href="/vehicles" >
+              Vehicles
+            </MenuItem>
           </Nav>
       </Navbar>
     );

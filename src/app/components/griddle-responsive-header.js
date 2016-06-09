@@ -14,6 +14,7 @@ class GriddleResponsiveHeaders extends React.Component{
 
     this.componentWillMount = this.componentWillMount.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.handleResize = this.handleResize.bind(this);
   }
 
@@ -27,10 +28,16 @@ class GriddleResponsiveHeaders extends React.Component{
     window.addEventListener('resize', this.handleResize);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('load', this.handleResize);
+    window.removeEventListener('click', this.handleResize);
+  }
+
   handleResize(e) {
     const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const view = ( width < 992 ) ? true : false;
-      this.setState({responsiveView: view});
+        this.setState({responsiveView: view});
   }
 
 
@@ -42,8 +49,10 @@ class GriddleResponsiveHeaders extends React.Component{
     const displayRight = this.props.rowData[right];
     return(
       <div className="griddle__responsive-header">
-        <div className="griddle__responsive-id">
-          {displayName} : {columnInfo}
+        <div className="griddle__responsive-title-column">
+          <div className="griddle__responsive-id">
+            {columnInfo}
+          </div>
         </div>
         <div className="griddle__data">
           <div className="griddle__responsive-name">

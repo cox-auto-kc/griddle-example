@@ -4860,9 +4860,8 @@ th {
 }
 
 .griddle-settings {
-  background-color: rgb(247, 247, 247);
   border: 1px solid rgb(51, 51, 51);
-  color: #0585c8;
+  color: rgb(36, 36, 36);
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -4898,22 +4897,6 @@ th {
 }
 
 .griddle-body {
-& th.griddle__is-sortable,
-  th .sort-descending,
-  th .sort-ascending {
-    cursor: pointer;
-  }
-& tr .griddle__column--known,
-  tr .griddle__column--last-ref {
-    vertical-align: middle;
-  }
-& tr .griddle__column--avatar,
-  tr .griddle__column--name,
-  tr .griddle__column--age,
-  tr .griddle__column--trade {
-    vertical-align: middle;
-    text-align: center;
-  }
 }
 
 .griddle-body table{
@@ -4932,31 +4915,39 @@ th {
 
   background-color: rgb(240, 240, 240);
 
+  color: rgb(36, 36, 36);
+
   border: 0;
 
   border-bottom: 1px solid rgb(51, 51, 51);
 
-  color: #0585c8;
+  padding: 8px;
 
-  padding: 5px;
+}
+
+.griddle-body th .griddle__is-sortable,
+.griddle-body th .sort-descending,
+.griddle-body th .sort-ascending{
+
+  cursor: pointer;
 
 }
 
 .griddle-body td{
 
-  padding: 5px 15px;
-
-  background-color: rgb(247, 247, 247);
+  background-color: #fff;
 
   border-top: 1px solid rgb(87, 87, 87);
 
   border-bottom: 1px solid rgb(87, 87, 87);
 
-  border-left: 1px solid rgb(153, 153, 153);
+  border-left: 1px solid rgb(247, 247, 247);
 
-  border-right: 1px solid rgb(153, 153, 153);
+  border-right: 1px solid rgb(247, 247, 247);
 
-  color: #0585c8;
+  color: rgb(36, 36, 36);
+
+  padding: 8px;
 
 }
 
@@ -4965,6 +4956,30 @@ th {
   width: 65px;
 
   vertical-align: middle;
+
+}
+
+.griddle-body tr .griddle__column--known,
+.griddle-body tr .griddle__column--last-ref{
+
+  vertical-align: middle;
+
+}
+
+.griddle-body tr .griddle__column--avatar,
+.griddle-body tr .griddle__column--name,
+.griddle-body tr .griddle__column--age,
+.griddle-body tr .griddle__column--trade{
+
+  vertical-align: middle;
+
+  text-align: center;
+
+}
+
+.griddle-body .griddle__header-sort-icon{
+
+  margin-left: 8px;
 
 }
 
@@ -5026,7 +5041,7 @@ th {
 
 }
 
-.griddle__responsive-id{
+.griddle__responsive-title-column{
 
   width: 35%;
 
@@ -5042,7 +5057,8 @@ th {
 
 }
 
-.griddle__responsive-name a{
+.griddle__responsive-name a,
+.griddle__responsive-id{
 
   color: rgb(247, 247, 247);
 
@@ -5184,6 +5200,12 @@ th {
 
 @media screen and (max-width: 992px){
 
+  .griddle-settings .griddle-column-selection{
+
+    width: 50%;
+
+  }
+
   .griddle-body{
   }
 
@@ -5277,6 +5299,12 @@ th {
     text-align: center;
 
     display: inline-block;
+
+  }
+
+  .griddle__responsive-hide{
+
+    display: none;
 
   }
 

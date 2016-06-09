@@ -15,6 +15,7 @@ import AppLinkedItems from './pages/AppLinkedItems';
 import AppAlerts from './pages/AppAlerts';
 import AppGriddle from './pages/AppGriddle';
 import AppGriddleReddit from './pages/AppGriddleReddit';
+import AppGriddleVehicles from './pages/AppGriddleVehicles';
 
 
 const store = configureStore();
@@ -32,6 +33,7 @@ ReactDOM.render((
         <Route path="/alerts" component={AppAlerts} />
         <Route path="/charts" component={AppGriddle} />
         <Route path="/reddit" component={AppGriddleReddit} />
+        <Route path="/vehicles" component={AppGriddleVehicles} />
       </Route>
     </Router>
   </Provider>
