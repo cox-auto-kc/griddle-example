@@ -5205,6 +5205,12 @@ th {
 
 @media screen and (max-width: 992px){
 
+  .griddle-container{
+
+    border: 0;
+
+  }
+
   .griddle-settings .griddle-column-selection{
 
     width: 50%;
@@ -5222,17 +5228,11 @@ th {
 
   .griddle-body td{
 
-    border: 1px solid rgb(153, 153, 153);
+    border: 1px solid #ddd;
 
     display: block;
 
     padding: 0;
-
-  }
-
-  .griddle-body tr{
-
-    border: 1px solid rgb(153, 153, 153);
 
   }
 
@@ -5258,7 +5258,7 @@ th {
 
     background-color: rgb(247, 247, 247);
 
-    border-right: 1px solid rgb(153, 153, 153);
+    border-right: 1px solid #ddd;
 
     font-weight: bold;
 
