@@ -16,10 +16,7 @@ import AppAlerts from './pages/AppAlerts';
 import AppGriddle from './pages/AppGriddle';
 import AppGriddleReddit from './pages/AppGriddleReddit';
 import AppGriddleVehicles from './pages/AppGriddleVehicles';
-<<<<<<< HEAD
 import AppExternalData from './pages/AppExternalData';
-=======
->>>>>>> 14d82be23df41153f8390fdd1678ef286fc19035
 
 
 const store = configureStore();
@@ -38,10 +35,7 @@ ReactDOM.render((
         <Route path="/charts" component={AppGriddle} />
         <Route path="/reddit" component={AppGriddleReddit} />
         <Route path="/vehicles" component={AppGriddleVehicles} />
-<<<<<<< HEAD
         <Route path="/external-data" component={AppExternalData} />
-=======
->>>>>>> 14d82be23df41153f8390fdd1678ef286fc19035
       </Route>
     </Router>
   </Provider>
