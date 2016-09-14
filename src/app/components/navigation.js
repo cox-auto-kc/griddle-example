@@ -3,11 +3,19 @@ import ReactDom from 'react-dom';
 
 //Router
 //import { Link } from 'react-router';
+<<<<<<< HEAD
 import {IndexLink} from 'react-router';
+=======
+>>>>>>> 14d82be23df41153f8390fdd1678ef286fc19035
 
 //Bootstrap Components
 import { Navbar, Nav, MenuItem } from 'react-bootstrap';
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 14d82be23df41153f8390fdd1678ef286fc19035
 class Navigation extends React.Component {
   constructor(props){
     super(props);
@@ -17,6 +25,7 @@ class Navigation extends React.Component {
     return(
       <Navbar>
         <Nav >
+<<<<<<< HEAD
             <MenuItem
             >
               <IndexLink to='/'>
@@ -67,6 +76,34 @@ class Navigation extends React.Component {
               <IndexLink to='/external-data' >
                 External Data
               </IndexLink>
+=======
+            <MenuItem href="/" >
+              Home
+            </MenuItem>
+            <MenuItem href="/buttons" >
+              Buttons
+            </MenuItem>
+            <MenuItem href="/progress-bar" >
+              Progress Bar
+            </MenuItem>
+            <MenuItem href="/text-fields" >
+              Text Fields
+            </MenuItem>
+            <MenuItem href="/linked-items" >
+              Linked Items
+            </MenuItem>
+            <MenuItem href="/alerts" >
+              Alerts
+            </MenuItem>
+            <MenuItem href="/charts" >
+              Charts
+            </MenuItem>
+            <MenuItem href="/reddit" >
+              Reddit
+            </MenuItem>
+            <MenuItem href="/vehicles" >
+              Vehicles
+>>>>>>> 14d82be23df41153f8390fdd1678ef286fc19035
             </MenuItem>
           </Nav>
       </Navbar>
