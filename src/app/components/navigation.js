@@ -3,11 +3,10 @@ import ReactDom from 'react-dom';
 
 //Router
 //import { Link } from 'react-router';
+import {IndexLink} from 'react-router';
 
 //Bootstrap Components
 import { Navbar, Nav, MenuItem } from 'react-bootstrap';
-
-
 
 class Navigation extends React.Component {
   constructor(props){
@@ -18,32 +17,56 @@ class Navigation extends React.Component {
     return(
       <Navbar>
         <Nav >
-            <MenuItem href="/" >
-              Home
+            <MenuItem
+            >
+              <IndexLink to='/'>
+                Home
+              </IndexLink>
             </MenuItem>
-            <MenuItem href="/buttons" >
-              Buttons
+            <MenuItem >
+              <IndexLink to='/buttons'>
+                Buttons
+              </IndexLink>
             </MenuItem>
-            <MenuItem href="/progress-bar" >
-              Progress Bar
+            <MenuItem >
+              <IndexLink to='/progress-bar' >
+                Progress Bar
+              </IndexLink>
             </MenuItem>
-            <MenuItem href="/text-fields" >
-              Text Fields
+            <MenuItem >
+              <IndexLink to='/text-fields' >
+                Text Fields
+              </IndexLink>
             </MenuItem>
-            <MenuItem href="/linked-items" >
-              Linked Items
+            <MenuItem >
+              <IndexLink to='/linked-items' >
+                Linked Items
+              </IndexLink>
             </MenuItem>
-            <MenuItem href="/alerts" >
-              Alerts
+            <MenuItem >
+              <IndexLink to='/alerts' >
+                Alerts
+              </IndexLink>
             </MenuItem>
-            <MenuItem href="/charts" >
-              Charts
+            <MenuItem >
+              <IndexLink to='/charts' >
+                Charts
+              </IndexLink>
             </MenuItem>
-            <MenuItem href="/reddit" >
-              Reddit
+            <MenuItem >
+              <IndexLink to='/reddit' >
+                Reddit
+              </IndexLink>
             </MenuItem>
-            <MenuItem href="/vehicles" >
-              Vehicles
+            <MenuItem >
+              <IndexLink to='/vehicles' >
+                Vehicles
+              </IndexLink>
+            </MenuItem>
+            <MenuItem >
+              <IndexLink to='/external-data' >
+                External Data
+              </IndexLink>
             </MenuItem>
           </Nav>
       </Navbar>

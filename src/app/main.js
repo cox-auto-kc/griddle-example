@@ -23,8 +23,8 @@ class Main extends React.Component {
         <center>
           <Navigation />
           <img src="images/react.png" style={{maxWidth: "100%"}}/>
-          <h1>This is a React App to start building ReactSuit.  Yay!</h1>
-
+          <h1>This is a React App to start building ReactSuit.</h1>
+			<p>This package is specifically set up to view Advanced Griddle examples.  You can view these under the 'Charts', 'Reddit' and 'Vehicles' links</p>
           <Grid className="background__MainWrapper">
             {this.props.children}
           </Grid>

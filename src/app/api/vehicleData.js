@@ -119,6 +119,126 @@ module.exports = {
       'Model': 'Compass Latitude',
       'Year': '2014',
       'Price': '$17,998'
+    },
+    {
+      'id': 15,
+      'Image': '../vehicles/ford-taurus-16.jpg',
+      'Make': 'Ford',
+      'Model': 'Taurus',
+      'Year': '2006',
+      'Price': '$17,110'
+    },
+    {
+      'id': 16,
+      'Image': '../vehicles/acura-rdx-08.jpg',
+      'Make': 'Acura',
+      'Model': 'RDX',
+      'Year': '2017',
+      'Price': '$13,998'
+    },
+    {
+      'id': 17,
+      'Image': '../vehicles/cadillac-cts-09.jpg',
+      'Make': 'Cadillac',
+      'Model': 'CTS',
+      'Year': '2005',
+      'Price': '$12,599'
+    },
+    {
+      'id': 18,
+      'Image': '../vehicles/bmw-335XI-11.jpg',
+      'Make': 'BMW',
+      'Model': '335 XI',
+      'Year': '2012',
+      'Price': '$20,998'
+    },
+    {
+      'id': 19,
+      'Image': '../vehicles/buick-lacrosse-12.jpg',
+      'Make': 'Buick',
+      'Model': 'LaCrosse',
+      'Year': '2012',
+      'Price': '$17,998'
+    },
+    {
+      'id': 20,
+      'Image': '../vehicles/audi-q7premium-11.jpg',
+      'Make': 'Audi',
+      'Model': 'Q7 Premium',
+      'Year': '2014',
+      'Price': '$24,998'
+    },
+    {
+      'id': 21,
+      'Image': '../vehicles/chevrolet-hhrlt-06.jpg',
+      'Make': 'Chevrolet',
+      'Model': 'HHR LT',
+      'Year': '2008',
+      'Price': '$9,498'
+    },
+    {
+      'id': 22,
+      'Image': '../vehicles/dodge-dartgt-14.jpg',
+      'Make': 'Dodge',
+      'Model': 'Dart Gt',
+      'Year': '2015',
+      'Price': '$17,998'
+    },
+    {
+      'id': 23,
+      'Image': '../vehicles/dodge-durangosxt-14.jpg',
+      'Make': 'Dodge',
+      'Model': 'Durango SXT',
+      'Year': '2017',
+      'Price': '$27,998'
+    },
+    {
+      'id': 24,
+      'Image': '../vehicles/fiat-500abarth-13.jpg',
+      'Make': 'Fiat',
+      'Model': '500 Abarth',
+      'Year': '2016',
+      'Price': '$11,998'
+    },
+    {
+      'id': 25,
+      'Image': '../vehicles/gmc-terrainsle-13.jpg',
+      'Make': 'GMC',
+      'Model': 'Terrain SLE',
+      'Year': '2017',
+      'Price': '$17,098'
+    },
+    {
+      'id': 26,
+      'Image': '../vehicles/hyundai-sonatase-13.jpg',
+      'Make': 'Hyundai',
+      'Model': 'Sonata SE',
+      'Year': '2014',
+      'Price': '$14,998'
+    },
+    {
+      'id': 27,
+      'Image': '../vehicles/hyundai-sonatasport-14.jpg',
+      'Make': 'Hyundai',
+      'Model': 'Sonata Sport',
+      'Year': '2013',
+      'Price': '$21,599'
+    },
+    {
+      'id': 28,
+      'Image': '../vehicles/infiniti-jx35-13.jpg',
+      'Make': 'Infiniti',
+      'Model': 'JX35',
+      'Year': '2015',
+      'Price': '$34,998'
+    },
+    {
+      'id': 29,
+      'Image': '../vehicles/jeep-compasslatitude-14.jpg',
+      'Make': 'Jeep',
+      'Model': 'Compass Latitude',
+      'Year': '2014',
+      'Price': '$11,998'
     }
   ]
 };
